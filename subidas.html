@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Treino para melhorar nas subidas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:#fff;
+      font-family:'Roboto',sans-serif;
+      line-height:1.7;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#000;
+      border-top:4px solid #d40000;
+      border-bottom:1px solid #1b1b1b;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .container{
+      width:95%;
+      max-width:1400px;
+      margin:auto;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
+
+    .logo{
+      font-family:'Oswald',sans-serif;
+      font-size:34px;
+      font-weight:700;
+      text-transform:uppercase;
+    }
+
+    .logo span{
+      color:#d40000;
+    }
+
+    nav ul{
+      display:flex;
+      gap:28px;
+      list-style:none;
+      align-items:center;
+    }
+
+    nav ul li a{
+      font-family:'Oswald',sans-serif;
+      text-transform:uppercase;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#d40000;
+    }
+
+    /* HERO */
+
+    .article-hero{
+      position:relative;
+      height:550px;
+      overflow:hidden;
+    }
+
+    .article-hero img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .article-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,0.96), rgba(0,0,0,0.3));
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:70px 5%;
+    }
+
+    .article-tag{
+      display:inline-block;
+      width:max-content;
+      background:#d40000;
+      padding:8px 16px;
+      font-size:12px;
+      font-weight:bold;
+      text-transform:uppercase;
+      margin-bottom:20px;
+      letter-spacing:1px;
+    }
+
+    .article-overlay h1{
+      font-family:'Oswald',sans-serif;
+      font-size:74px;
+      line-height:1.1;
+      text-transform:uppercase;
+      margin-bottom:20px;
+      max-width:900px;
+    }
+
+    .article-overlay p{
+      max-width:700px;
+      font-size:20px;
+      color:#ddd;
+      line-height:1.8;
+    }
+
+    /* CONTEÚDO */
+
+    .article-content{
+      width:90%;
+      max-width:950px;
+      margin:70px auto;
+    }
+
+    .article-content h2{
+      font-family:'Oswald',sans-serif;
+      font-size:38px;
+      margin-top:55px;
+      margin-bottom:20px;
+      text-transform:uppercase;
+    }
+
+    .article-content p{
+      font-size:19px;
+      color:#cfcfcf;
+      line-height:2;
+      margin-bottom:25px;
+    }
+
+    .article-content blockquote{
+      border-left:4px solid #d40000;
+      padding:20px 25px;
+      margin:40px 0;
+      background:#0d0d0d;
+      color:#fff;
+      font-size:22px;
+      font-style:italic;
+    }
+
+    /* ADSENSE */
+
+    .adsense-banner{
+      width:90%;
+      max-width:950px;
+      background:#0d0d0d;
+      border:1px dashed #d40000;
+      padding:25px;
+      margin:45px auto;
+      text-align:center;
+      border-radius:8px;
+    }
+
+    .adsense-banner span{
+      display:block;
+      color:#d40000;
+      font-family:'Oswald',sans-serif;
+      font-size:22px;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#000;
+      border-top:2px solid #d40000;
+      padding:35px 0;
+      text-align:center;
+      color:#777;
+      margin-top:80px;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:900px){
+
+      nav{
+        display:none;
+      }
+
+      .article-overlay h1{
+        font-size:52px;
+      }
+
+      .article-overlay p{
+        font-size:18px;
+      }
+
+    }
+
+    @media(max-width:600px){
+
+      .article-hero{
+        height:430px;
+      }
+
+      .article-overlay{
+        padding:40px 6%;
+      }
+
+      .article-overlay h1{
+        font-size:36px;
+      }
+
+      .article-overlay p{
+        font-size:16px;
+      }
+
+      .article-content h2{
+        font-size:28px;
+      }
+
+      .article-content p{
+        font-size:17px;
+        line-height:1.9;
+      }
+
+      .article-content blockquote{
+        font-size:18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">
+        Gordinho Da <span>MTB</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="treinos.html">Treinos</a></li>
+          <li><a href="#">Equipamentos</a></li>
+          <li><a href="#">Rotas</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="article-hero">
+
+    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="article-overlay">
+
+      <span class="article-tag">Resistência</span>
+
+      <h1>Treino para melhorar nas subidas</h1>
+
+      <p>
+        Aprenda técnicas de força e cadência para encarar subidas difíceis sem perder rendimento durante o pedal.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ANÚNCIO 1 -->
+
+  <div class="adsense-banner">
+
+    <span>Publicidade</span>
+
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-SEU-CODIGO"
+         data-ad-slot="1111111111"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+
+  </div>
+
+  <!-- ARTIGO -->
+
+ <section class="article-content">
+
+  <p>
+   Subidas fazem parte da evolução de qualquer ciclista. Seja no MTB, speed ou pedal de estrada, elas exigem força, resistência, controle da respiração e estratégia. Muitos ciclistas perdem rendimento nas primeiras inclinações por errar no ritmo, na cadência ou até na postura sobre a bicicleta.
+
+   A boa notícia é que subir melhor não depende apenas de ter pernas fortes. Com treino correto, técnica e constância, é possível enfrentar subidas difíceis com muito mais eficiência e menos desgaste.
+</p>
+
+  <p>
+    A boa notícia é que resistência pode ser treinada e desenvolvida com o
+    tempo. Não importa se você está começando agora ou já possui experiência
+    nas trilhas. Com treino inteligente, alimentação adequada e consistência,
+    é possível aumentar muito sua capacidade física e melhorar seu desempenho
+    em qualquer tipo de pedal.
+  </p>
+
+  <p>
+    Muitas pessoas acreditam que resistência está ligada apenas à força nas
+    pernas, mas na verdade ela envolve diversos fatores. O sistema cardiovascular,
+    a respiração, a alimentação, a hidratação e até o descanso fazem parte do
+    processo de evolução no ciclismo.
+  </p>
+
+
+    <h2>Treinos longos são fundamentais</h2>
+
+    <p>
+      Um dos métodos mais eficientes para ganhar resistência é realizar treinos
+      longos de forma gradual.
+    </p>
+
+    <p>
+      Pedais mais extensos ajudam o corpo a se adaptar ao esforço contínuo e
+      ensinam o organismo a utilizar energia de maneira mais eficiente.
+    </p>
+
+    <blockquote>
+    “Quem desenvolve resistência não aprende apenas a pedalar mais longe. Aprende também a superar os próprios limites.”
+  </blockquote>
+
+    <!-- ANÚNCIO 2 -->
+
+    <div class="adsense-banner">
+
+      <span>Anúncio</span>
+
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-SEU-CODIGO"
+           data-ad-slot="2222222222"
+           data-ad-format="fluid"
+           data-ad-layout="in-article"></ins>
+
+    </div>
+
+    
+    <h2>2. Controle o ritmo do pedal</h2>
+
+    <p>
+      Muitos ciclistas iniciantes começam o treino muito forte e acabam cansando
+      rapidamente. Saber controlar o ritmo é essencial para melhorar a performance.
+    </p>
+
+    <p>
+      Durante treinos longos, mantenha uma intensidade moderada, onde você ainda
+      consegue conversar sem ficar extremamente ofegante. Isso ajuda o corpo a
+      trabalhar melhor a resistência cardiovascular.
+    </p>
+
+     <h2>3. Alimentação faz diferença</h2>
+
+    <p>
+      Sem combustível o corpo não rende. Uma alimentação equilibrada ajuda na
+      recuperação muscular, fornece energia e evita fadiga precoce.
+    </p>
+
+    <p>
+      Antes do treino, priorize carboidratos leves. Durante pedais longos,
+      utilize água, frutas, isotônicos ou suplementos para manter a energia.
+      Após o treino, proteínas e carboidratos ajudam na recuperação.
+    </p>
+
+    <!-- ANÚNCIO 3 -->
+
+    <div class="adsense-banner">
+
+      <span>Publicidade</span>
+
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-SEU-CODIGO"
+           data-ad-slot="3333333333"
+           data-ad-format="rectangle"></ins>
+
+    </div>
+
+     <h2>4. Não ignore o descanso</h2>
+
+    <p>
+      Descansar também faz parte da evolução. O corpo precisa se recuperar para
+      se adaptar aos estímulos dos treinos.
+    </p>
+
+    <p>
+      Dormir bem, manter hidratação e respeitar dias de recuperação evita lesões
+      e melhora seu desempenho nos próximos pedais.
+    </p>
+
+    <h2>5. Tenha constância</h2>
+
+    <p>
+      Resistência não é construída da noite para o dia. O segredo está na
+      consistência. Pedalar regularmente, mesmo em treinos leves, gera evolução
+      contínua ao longo do tempo.
+    </p>
+
+    <p>
+      Com disciplina, alimentação correta e treinos bem organizados, você vai
+      perceber que subidas ficam menos cansativas, o ritmo melhora e os pedais
+      longos começam a parecer mais fáceis.
+    </p>
+
+  </div>
+
+
+
+    <h2>Conclusão</h2>
+
+    <p>
+      Melhorar resistência no pedal exige dedicação, paciência e disciplina.
+      Treinos longos, alimentação correta e descanso formam a base da evolução.
+    </p>
+
+    <p>
+      Continue treinando e aproveite cada evolução no caminho.
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>© 2026 Gordinho Da MTB - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- GOOGLE ADSENSE -->
+
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-SEU-CODIGO"
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+</body>
+
+</html>
