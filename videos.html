@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gordinho Da MTB - Vídeos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:1px;
+  box-sizing:border-box;
+}
+
+body{
+  background:#050505;
+  color:#fff;
+  font-family:'Roboto',sans-serif;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:95%;
+  max-width:1400px;
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  background:#000;
+  border-top:4px solid #d40000;
+  border-bottom:1px solid #1b1b1b;
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(10px);
+}
+
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1px 0;
+}
+
+.logo{
+  font-family:'Oswald',sans-serif;
+  font-size:34px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+.logo span{
+  color:#d40000;
+}
+
+nav ul{
+  display:flex;
+  gap:28px;
+  list-style:none;
+}
+
+nav ul li a{
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+  transition:0.3s;
+  font-size:14px;
+}
+
+nav ul li a:hover{
+  color:#d40000;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  height:700px;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.82),
+    rgba(0,0,0,0.55)
+  ),
+
+  url('img/videos-mtb.png')
+  center/cover no-repeat;
+
+  display:flex;
+  align-items:center;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right,
+  rgba(0,0,0,0.88),
+  rgba(0,0,0,0.25));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+}
+
+.hero h1{
+  font-family:'Oswald',sans-serif;
+  font-size:86px;
+  line-height:0.95;
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:#d40000;
+}
+
+.hero p{
+  font-size:22px;
+  color:#ddd;
+  line-height:1.8;
+  max-width:650px;
+}
+
+/* TITULO */
+
+.section-title{
+  margin:70px 0 35px;
+}
+
+.section-title h2{
+  font-size:42px;
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+}
+
+.section-title span{
+  color:#d40000;
+}
+
+/* GRID */
+
+.videos-page-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:25px;
+
+  margin-bottom:80px;
+}
+
+/* CARD */
+
+.video-box{
+  background:#0d0d0d;
+  border:1px solid #1f1f1f;
+  border-radius:14px;
+  overflow:hidden;
+  transition:0.35s;
+}
+
+.video-box:hover{
+  transform:translateY(-6px);
+  border-color:#d40000;
+  box-shadow:0 0 25px rgba(212,0,0,0.28);
+}
+
+/* VIDEO */
+
+.video-wrapper{
+  position:relative;
+}
+
+.video-wrapper iframe{
+  width:100%;
+  height:190px;
+}
+
+/* BLOQUEIO */
+
+.video-lock{
+  position:absolute;
+  inset:0;
+
+  background:rgba(0,0,0,0.96);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  padding:20px;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:0.4s;
+}
+
+.video-lock.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.lock-content h3{
+  font-size:24px;
+  margin-bottom:12px;
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+}
+
+.lock-content p{
+  color:#ccc;
+  margin-bottom:20px;
+  line-height:1.6;
+  font-size:14px;
+}
+
+/* BOTÃO */
+
+.btn{
+  display:inline-block;
+  background:#d40000;
+  padding:13px 24px;
+  border-radius:6px;
+  font-weight:bold;
+  text-transform:uppercase;
+  transition:0.3s;
+  font-size:13px;
+}
+
+.btn:hover{
+  background:#ff1a1a;
+  transform:translateY(-2px);
+}
+
+/* INFO */
+
+.video-info{
+  padding:22px;
+}
+
+.video-tag{
+  display:inline-block;
+  background:#d40000;
+  padding:6px 12px;
+  font-size:11px;
+  font-weight:bold;
+  margin-bottom:16px;
+  border-radius:4px;
+  text-transform:uppercase;
+}
+
+.video-info h3{
+  font-size:21px;
+  margin-bottom:12px;
+  font-family:'Oswald',sans-serif;
+  line-height:1.4;
+}
+
+.video-info p{
+  color:#aaa;
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#000;
+  border-top:2px solid #d40000;
+  padding:40px 0;
+}
+
+.copyright{
+  text-align:center;
+  color:#777;
+  font-size:14px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    height:560px;
+  }
+
+  .hero h1{
+    font-size:58px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero{
+    height:480px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .section-title h2{
+    font-size:32px;
+  }
+
+}
+
+/* ===== MENU HAMBÚRGUER ===== */
+
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+  z-index:2000;
+}
+
+.menu-toggle span{
+  width:28px;
+  height:3px;
+  background:#fff;
+  transition:0.3s;
+  border-radius:2px;
+}
+
+/* NAV MOBILE */
+@media(max-width:900px){
+
+  .menu-toggle{
+    display:flex;
+  }
+}
+
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container navbar">
+  
+    <!-- BOTÃO HAMBÚRGUER -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="logo">
+    Gordinho Da <span>MTB</span>
+  </div>
+
+  <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      <li><a href="noticias.html">Notícias</a></li>
+      <li><a href="treinos.html">Treinos</a></li>
+      <li><a href="equipamentos.html">Equipamentos</a></li>
+      <li><a href="rotas.html">Rotas</a></li>
+      <li><a href="videos.html">Vídeos</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="eventos.html">Inscrições</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+  <div class="hero-content">
+
+    <h1>
+      Vídeos <span>Insanos</span><br>
+      de MTB
+    </h1>
+
+    <p>
+      Descidas radicais, trilhas épicas, aventuras extremas e muita adrenalina
+      sobre duas rodas. Prepare-se para viver o verdadeiro mundo do MTB.
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- TITULO -->
+
+<section class="container">
+
+<div class="section-title">
+
+  <h2>
+    Vídeos em <span>Destaque</span>
+  </h2>
+
+</div>
+
+</section>
+
+<!-- VIDEOS -->
+
+<section class="container">
+
+<div class="videos-page-grid">
+
+  <!-- VIDEO 1 -->
+
+  <div class="video-box">
+
+    <div class="video-wrapper">
+
+      <iframe
+        class="youtube-video"
+        src="https://www.youtube.com/embed/2bH06NFWqPc?start=10&enablejsapi=1"
+        title="Vídeo MTB"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+
+      <div class="video-lock">
+
+        <div class="lock-content">
+
+          <h3>Continue no YouTube</h3>
+
+          <p>
+            Assista o vídeo completo no canal oficial.
+          </p>
+
+          <a
+            href="https://www.youtube.com/watch?v=2bH06NFWqPc"
+            target="_blank"
+            class="btn">
+
+            Assistir Completo
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="video-info">
+
+      <span class="video-tag">
+        Copa Internacional
+      </span>
+
+      <h3>
+        Internacional Chaoyang Estrada Real 2026
+      </h3>
+
+      <p>
+        Etapa emocionante em Congonhas-MG com muita técnica e adrenalina.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- VIDEO 2 -->
+
+  <div class="video-box">
+
+    <div class="video-wrapper">
+
+      <iframe
+        class="youtube-video"
+        src="https://www.youtube.com/embed/gY0_ykNZ2DI?enablejsapi=1"
+        title="Vídeo Bike"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+
+      <div class="video-lock">
+
+        <div class="lock-content">
+
+          <h3>Continue no YouTube</h3>
+
+          <p>
+            Assista o vídeo completo no canal oficial.
+          </p>
+
+          <a
+            href="https://www.youtube.com/watch?v=gY0_ykNZ2DI"
+            target="_blank"
+            class="btn">
+
+            Assistir Completo
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="video-info">
+
+      <span class="video-tag">
+        Cicloturismo
+      </span>
+
+      <h3>
+        Passeio Ciclístico de Itaverava
+      </h3>
+
+      <p>
+        Percurso completo por estradas incríveis e paisagens de Minas Gerais.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- VIDEO 3 -->
+
+  <div class="video-box">
+
+    <div class="video-wrapper">
+
+      <iframe
+        class="youtube-video"
+        src="https://www.youtube.com/embed/mlFcE481HrE?start=427&enablejsapi=1"
+        title="Vídeo Motivacional"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+
+      <div class="video-lock">
+
+        <div class="lock-content">
+
+          <h3>Continue no YouTube</h3>
+
+          <p>
+            Veja o vídeo completo no canal.
+          </p>
+
+          <a
+            href="https://www.youtube.com/watch?v=mlFcE481HrE"
+            target="_blank"
+            class="btn">
+
+            Assistir Completo
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="video-info">
+
+      <span class="video-tag">
+        Motivacional
+      </span>
+
+      <h3>
+        Pedalar é Vida • Carandaí-MG
+      </h3>
+
+      <p>
+        Um vídeo inspirador mostrando o verdadeiro espírito do MTB.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- VIDEO 4 -->
+
+  <div class="video-box">
+
+    <div class="video-wrapper">
+
+      <iframe
+        class="youtube-video"
+        src="https://www.youtube.com/embed/Y9ahG2oRTzE?enablejsapi=1"
+        title="Vídeo Lamim"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+
+      <div class="video-lock">
+
+        <div class="lock-content">
+
+          <h3>Continue no YouTube</h3>
+
+          <p>
+            Continue assistindo no canal oficial.
+          </p>
+
+          <a
+            href="https://www.youtube.com/watch?v=Y9ahG2oRTzE"
+            target="_blank"
+            class="btn">
+
+            Assistir Completo
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="video-info">
+
+      <span class="video-tag">
+        Cicloturismo
+      </span>
+
+      <h3>
+        1º Cicloturismo de Lamim
+      </h3>
+
+      <p>
+        Percurso completo e reduzido pelas belas estradas de Minas Gerais.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+  <div class="copyright">
+    © 2026 Gordinho Da MTB • Todos os direitos reservados.
+  </div>
+
+</div>
+
+</footer>
+
+<!-- API YOUTUBE -->
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<!-- SCRIPT -->
+
+<script>
+
+const tempoBloqueio = 300000;
+
+// BLOQUEIO
+const bloqueios =
+document.querySelectorAll('.video-lock');
+
+bloqueios.forEach((bloqueio) => {
+
+  setTimeout(() => {
+
+    bloqueio.classList.add('active');
+
+  }, tempoBloqueio);
+
+});
+
+// PAUSAR OUTROS VIDEOS
+let players = [];
+
+function onYouTubeIframeAPIReady(){
+
+  const iframes =
+  document.querySelectorAll('.youtube-video');
+
+  iframes.forEach((iframe, index) => {
+
+    players[index] = new YT.Player(iframe, {
+
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+
+    });
+
+  });
+
+}
+
+function onPlayerStateChange(event){
+
+  if(event.data == YT.PlayerState.PLAYING){
+
+    players.forEach((player) => {
+
+      if(player !== event.target){
+
+        player.pauseVideo();
+
+      }
+
+    });
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
