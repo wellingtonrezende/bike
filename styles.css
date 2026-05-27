@@ -1,6 +1,6 @@
  *{
-      margin: -1px;
-      padding:3px;;
+      margin: 0px;
+      padding:1px;;
       box-sizing:border-box;
     }
 
@@ -22,14 +22,13 @@
     }
 
     header{
-      background:#000;
-      border-top:4px solid #d40000;
-      border-bottom:1px solid #1b1b1b;
-      position:sticky;
-      top:0;
-      z-index:100;
-      backdrop-filter:blur(10px);
-    }
+  background:#000;
+  border-top:4px solid #d40000;
+  border-bottom:1px solid #1b1b1b;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
 
     .navbar{
       display:flex;
@@ -106,6 +105,8 @@ nav ul li a:hover{
        max-width:650px;
       line-height:1.8;
     }
+
+
 
     .btn{
       display:inline-block;
