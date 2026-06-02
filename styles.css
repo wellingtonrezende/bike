@@ -76,10 +76,14 @@ nav ul li a:hover{
 
     .hero-home::before{
       content:'';
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to right, rgba(0,0,0,0.92), rgba(0,0,0,0.3));
-    }
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,0.50),
+        rgba(0,0,0,0.05)
+    );
+}
 
     .hero-content{
       position:relative;
@@ -104,6 +108,142 @@ nav ul li a:hover{
       color:#ddd;
        max-width:650px;
       line-height:1.8;
+    }
+
+     .hero-noticias{
+      position:relative;
+      height:700px;
+      background:url('img/noticias.png') center/cover;
+     display: flex;
+     align-items: center;
+    }
+
+    .hero-noticias::before{
+      content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,0.50),
+        rgba(0,0,0,0.05)
+    );
+}
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:720px;
+    }
+
+    .hero-noticias h1{
+      font-family:'Oswald',sans-serif;
+      font-size:86px;
+      line-height:0.90;
+      text-transform:uppercase;
+      margin-bottom:25px;
+    }
+
+    .hero-noticias h1 span{
+      color:#d40000;
+    }
+
+    .hero-noticias p{
+      font-size:22px;
+      color:#ddd;
+       max-width:650px;
+      line-height:1.8;
+    }
+
+
+    .hero-loja{
+      position:relative;
+      height:700px;
+      background:url('img/loja.png') center/cover;
+     display: flex;
+     align-items: center;
+    }
+
+    .hero-loja::before{
+     content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,0.50),
+        rgba(0,0,0,0.05)
+    );
+}
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:720px;
+    }
+
+    .hero-loja h1{
+      font-family:'Oswald',sans-serif;
+      font-size:86px;
+      line-height:0.90;
+      text-transform:uppercase;
+      margin-bottom:25px;
+    }
+
+    .hero-loja h1 span{
+      color:#d40000;
+    }
+
+    .hero-loja p{
+      font-size:22px;
+      color:#ddd;
+       max-width:650px;
+      line-height:1.8;
+
+    }
+
+
+     .hero-treino{
+      position:relative;
+      height:700px;
+      background:url('img/treinos.png') center/cover;
+     display: flex;
+     align-items: center;
+    }
+
+    .hero-treino::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,0.50),
+        rgba(0,0,0,0.05)
+    );
+}
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:720px;
+    }
+
+    .hero-treino h1{
+      font-family:'Oswald',sans-serif;
+      font-size:86px;
+      line-height:0.90;
+      text-transform:uppercase;
+      margin-bottom:25px;
+    }
+
+    .hero-treino h1 span{
+      color:#d40000;
+    }
+
+    .hero-treino p{
+      font-size:22px;
+      color:#ddd;
+       max-width:650px;
+      line-height:1.8;
+
     }
 
 
@@ -753,42 +893,4 @@ textarea{
 }
 
 
- .hero-loja{
-      position:relative;
-      height:700px;
-      background:url('img/loja.png') center/cover;
-     display: flex;
-     align-items: center;
-    }
-
-    .hero-loja::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to right, rgba(0,0,0,0.92), rgba(0,0,0,0.3));
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
-      max-width:720px;
-    }
-
-    .hero-loja h1{
-      font-family:'Oswald',sans-serif;
-      font-size:86px;
-      line-height:0.90;
-      text-transform:uppercase;
-      margin-bottom:25px;
-    }
-
-    .hero-loja h1 span{
-      color:#d40000;
-    }
-
-    .hero-loja p{
-      font-size:22px;
-      color:#ddd;
-       max-width:650px;
-      line-height:1.8;
-    }
+ 
