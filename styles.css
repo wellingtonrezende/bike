@@ -110,6 +110,145 @@ nav ul li a:hover{
       line-height:1.8;
     }
 
+
+    .hero-rota{
+      position:relative;
+      height:700px;
+      background:url('img/rotas.png') center/cover;
+     display: flex;
+     align-items: center;
+    }
+
+    .hero-rota::before{
+      content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,0.50),
+        rgba(0,0,0,0.05)
+    );
+}
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:720px;
+    }
+
+    .hero-rota h1{
+      font-family:'Oswald',sans-serif;
+      font-size:86px;
+      line-height:0.90;
+      text-transform:uppercase;
+      margin-bottom:25px;
+    }
+
+    .hero-rota h1 span{
+      color:#d40000;
+    }
+
+    .hero-rota p{
+      font-size:22px;
+      color:#ddd;
+       max-width:650px;
+      line-height:1.8;
+    }
+
+
+    .hero-evento{
+      position:relative;
+      height:700px;
+      background:url('img/inscrição.png') center/cover;
+     display: flex;
+     align-items: center;
+    }
+
+    .hero-evento::before{
+      content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,0.50),
+        rgba(0,0,0,0.05)
+    );
+}
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:720px;
+    }
+
+    .hero-evento h1{
+      font-family:'Oswald',sans-serif;
+      font-size:86px;
+      line-height:0.90;
+      text-transform:uppercase;
+      margin-bottom:25px;
+    }
+
+    .hero-evento h1 span{
+      color:#d40000;
+    }
+
+    .hero-evento p{
+      font-size:22px;
+      color:#ddd;
+       max-width:650px;
+      line-height:1.8;
+    }
+
+
+
+ .hero-contato{
+      position:relative;
+      height:700px;
+      background:url('img/contato.png') center/cover;
+     display: flex;
+     align-items: center;
+    }
+
+    .hero-contato::before{
+      content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,0.50),
+        rgba(0,0,0,0.05)
+    );
+}
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:720px;
+    }
+
+    .hero-contato h1{
+      font-family:'Oswald',sans-serif;
+      font-size:86px;
+      line-height:0.90;
+      text-transform:uppercase;
+      margin-bottom:25px;
+    }
+
+    .hero-contato h1 span{
+      color:#d40000;
+    }
+
+    .hero-contato p{
+      font-size:22px;
+      color:#ddd;
+       max-width:650px;
+      line-height:1.8;
+    }
+
+
+
+
      .hero-noticias{
       position:relative;
       height:700px;
