@@ -69,7 +69,7 @@ nav ul li a:hover{
     .hero{
       position:relative;
       height:700px;
-      background:url('img/imagem-inicial.png') center/cover;
+      background:url('img/loja.png') center/cover;
      display: flex;
      align-items: center;
     }
